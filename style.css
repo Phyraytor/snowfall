@@ -1,0 +1,45 @@
+body
+{
+	background-color: #77F;
+}
+
+.snow
+{
+	position: fixed;
+	top: -2%;
+	/* Меняйте только 3 следующие строки на своё усмотрение*/
+	width: 8px;
+	height: 8px;
+	animation: snowfall 8s infinite linear, leftToRight 5s infinite linear;
+}
+
+@keyframes snowfall {
+  from {
+    top: 0;
+  }
+  to {
+    top: 100%;
+  }
+}
+
+@keyframes leftToRight {
+  from {
+    transform: translateX(0);
+  }
+
+  25% {
+  	transform: translateX(5px);
+  }
+
+  50% {
+  	transform: translateX(0);
+  }
+
+  75% {
+  	transform: translateX(-5px);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
